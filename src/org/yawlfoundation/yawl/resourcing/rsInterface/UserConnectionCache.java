@@ -109,8 +109,8 @@ public class UserConnectionCache {
 
 
     public Participant getParticipantWithSessionHandle(String handle) {
-        UserConnection connection = _ySessionHandleLookup.get(handle);
-        return (connection != null) ? connection.getParticipant() : null;        
+    	UserConnection connection = _ySessionHandleLookup.get(handle);
+    	return (connection != null) ? connection.getParticipant() : null;        
     }
 
 

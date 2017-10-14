@@ -151,7 +151,7 @@ public class WorkQueueGateway extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse res)
                                 throws IOException, ServletException {
-        doPost(req, res);
+    	doPost(req, res);
     }
     
 

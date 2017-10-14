@@ -20,6 +20,7 @@ package org.yawlfoundation.yawl.resourcing.calendar;
 
 import org.yawlfoundation.yawl.resourcing.datastore.persistence.Persister;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -33,7 +34,7 @@ import java.util.Set;
  * @author Michael Adams
  * @date 18/10/2010
  */
-public class CalendarLogger {
+public class CalendarLogger implements Serializable{
 
     private Persister _persister;
 

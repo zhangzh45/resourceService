@@ -19,6 +19,7 @@
 package org.yawlfoundation.yawl.resourcing.jsf;
 
 import com.sun.rave.web.ui.appbase.AbstractPageBean;
+
 import com.sun.rave.web.ui.component.*;
 import com.sun.rave.web.ui.model.Option;
 import com.sun.rave.web.ui.model.UploadedFile;
@@ -614,6 +615,7 @@ public class caseMgt extends AbstractPageBean {
 
         if (uploadedFile != null) {
             String uploadedFileName = stripPath(uploadedFile.getOriginalName());
+            System.out.print("uploadedFile.getOriginalName():"+uploadedFile.getOriginalName()+"\n");
             if (validExtension(uploadedFileName)) {
                 String fileAsString ;
 

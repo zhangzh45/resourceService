@@ -25,6 +25,7 @@ import org.yawlfoundation.yawl.engine.interfce.SpecificationData;
 import org.yawlfoundation.yawl.engine.interfce.WorkItemRecord;
 import org.yawlfoundation.yawl.resourcing.QueueSet;
 import org.yawlfoundation.yawl.resourcing.TaskPrivileges;
+import org.yawlfoundation.yawl.resourcing.datastore.eventlog.LogMiner;
 import org.yawlfoundation.yawl.resourcing.resource.Participant;
 import org.yawlfoundation.yawl.resourcing.resource.UserPrivileges;
 import org.yawlfoundation.yawl.util.XNode;
@@ -151,7 +152,7 @@ public class WorkQueueGatewayClientAdapter {
      * @return a sessionhandle if successful, or a failure message if otherwise
      */
     public String userlogin(String userid, String password, boolean encrypt) {
-        try {
+    	try {
             return _wqclient.userlogin(userid, password, encrypt) ;
         }
         catch (IOException ioe) {
@@ -557,5 +558,4 @@ public class WorkQueueGatewayClientAdapter {
         return _wqclient.addRegisteredService(service.getURI(), service.get_serviceName(), service.get_servicePassword(),
                 service.getDocumentation(), service.isAssignable(), handle);
     }
-
 }

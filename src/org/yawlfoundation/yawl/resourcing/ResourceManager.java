@@ -2235,6 +2235,7 @@ public class ResourceManager extends InterfaceBWebsideController {
     public void serviceDisconnect(String handle) {
         _cache.serviceDisconnect(handle) ;
         removeCalendarStatusChangeListeners(handle);
+        _cache.serviceDisconnect(handle);
     }
 
     public boolean checkServiceConnection(String handle) {
@@ -2331,7 +2332,6 @@ public class ResourceManager extends InterfaceBWebsideController {
             return result ;
         }
     }
-
 
 
     public List<WorkItemRecord> getChildren(String parentID) {

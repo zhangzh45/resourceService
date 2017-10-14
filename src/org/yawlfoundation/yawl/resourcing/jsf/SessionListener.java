@@ -19,6 +19,7 @@
 package org.yawlfoundation.yawl.resourcing.jsf;
 
 import org.apache.log4j.Logger;
+
 import org.yawlfoundation.yawl.resourcing.ResourceManager;
 
 import javax.servlet.http.HttpSession;

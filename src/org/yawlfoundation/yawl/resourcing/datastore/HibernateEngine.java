@@ -18,10 +18,14 @@
 
 package org.yawlfoundation.yawl.resourcing.datastore;
 
+import net.sf.ehcache.CacheManager;
+
 import org.apache.log4j.Logger;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.exception.JDBCConnectionException;
+import org.hibernate.service.ServiceRegistry;
+import org.hibernate.service.ServiceRegistryBuilder;
 import org.hibernate.tool.hbm2ddl.SchemaUpdate;
 import org.yawlfoundation.yawl.engine.interfce.WorkItemRecord;
 import org.yawlfoundation.yawl.resourcing.ResourceMap;
@@ -114,6 +118,10 @@ public class HibernateEngine {
                 _cfg.addClass(persistedClass);
             }
 
+            //ServiceRegistry  sr = new ServiceRegistryBuilder().applySettings(_cfg.getProperties()).buildServiceRegistry();             
+            //_factory = _cfg.buildSessionFactory(sr);
+            //CacheManager.create();
+            
            // get a session context
             _factory = _cfg.buildSessionFactory();
 
